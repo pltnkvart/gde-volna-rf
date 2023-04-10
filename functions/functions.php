@@ -14,6 +14,14 @@
 		closeDB();
 		return $result;
 	}
+
+	function getWaves($id_region){
+		global $mysqli;
+		connectDB();
+		$result = $mysqli->query("SELECT * FROM `artificial waves` WHERE `id_region` = $id_region");
+		closeDB();
+		return $result;
+	}
 	//получить конкретный спот по id
 	function get_spot_by_id($id){
 		global $mysqli;
@@ -56,4 +64,14 @@
 	// 		$array[] = $row;
 	// 	return $array;
 	// }
+
+	function get_wave_by_id($id){
+		global $mysqli;
+		connectDB();
+		$spots = $mysqli->query("SELECT * FROM `artificial waves` WHERE `id` = $id");
+		foreach($spots as $spot){
+			return $spot;
+		}
+		closeDB();
+	}
 ?>

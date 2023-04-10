@@ -92,7 +92,7 @@
 									<img src="<?php echo $region["photo_region"]; ?>" width="100%">
 								</a>
 							</div>
-						</div>
+					 </div>
 				<?php endforeach; ?>
 			</div>
 		</div>

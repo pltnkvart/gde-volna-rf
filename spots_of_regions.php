@@ -4,6 +4,7 @@
   	<?php
 		include "functions/functions.php";
 		$spots = getSpots($_GET['id']);
+    $waves = getWaves($_GET['id']);
 		$regions = get_region_by_id($_GET['id']);
 	?>
     <meta charset="utf-8" />
@@ -101,7 +102,29 @@
 						</div>
 					</div>
 			<?php endforeach; ?>
-					
+      <?php
+				foreach($waves as $wave): ?>
+					<div class="colomn_spots_wave">
+            <style>
+              .colomn_spots_wave{
+                background: #87aefd;
+                display: inline-block;
+                cursor: pointer;
+                padding: 15px 15px 15px 15px;
+                width: 30%;
+                height: auto;
+                border-radius: 20px;
+                margin: 10px auto;
+              }
+            </style>
+						<div class="colomn_spots_inner">
+							<a class = "c1" href="one_wave.php?id=<?php echo $wave["id"] ?>">
+								<?php echo $wave["title"]; ?>
+								<img width=100% src="<?php echo $wave["photos"]; ?>">
+							</a>
+						</div>
+					</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div> 	
