@@ -165,6 +165,7 @@
           <p>Все права защищены</p>
         </div>
         <div class="link_wa_tg">
+		  <a href="https://vk.com/gdevolna"><img class="img_socials" src="images/vk.png" alt="" /></a>
           <a href="https://t.me/gdevolna"><img class="img_socials" src="images/tg.png" alt="" /></a>
           <a href="https://wa.link/mvfsy4"><img class="img_socials" src="images/wa.png" alt="" /></a>
           <a href="tel:+7 965 285 87 81"
